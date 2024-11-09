@@ -1,0 +1,53 @@
+name: Build
+run-name: 🚀 Render resumed
+on: 
+    push:
+        branches:
+          - 'main'
+jobs:
+    build:
+        name: Code standards & build
+        if: "! contains(toJSON(github.event.commits.*.message), '[skip ci]')"
+        runs-on: ubuntu-latest
+        timeout-minutes: 3
+        permissions:
+          contents: write
+        strategy:
+            matrix:
+                node-version: [20.x]
+
+        steps:
+        - name: "☁️ Checkout repository"
+          uses: actions/checkout@v4
+
+        - name: "🔧 Setup Node.js ${{ matrix.node-version }}"
+          uses: actions/setup-node@v4
+          with:
+            node-version: ${{ matrix.node-version }}
+            cache: "npm"
+
+        - name: "📦 Install dependencies"
+          run: npm install && npm ci
+        
+        - name: "Run resumed validate"
+          run: npm run validate
+
+        - name: "Run resumed Render"
+          run: npm run render
+
+        - name: "Convert html to pdf"
+          run: npm run convert
+
+        - name: "Add file to staging"
+          run: |
+            COMMIT_ID="${{ github.sha }}"
+            git config --local user.name "Sathya Narayana Bhat"
+            git config --local user.email "snbhat0708@gmail.com"
+            git add Sathya_Bhat_Resume_Latest.pdf
+            git commit -m "$COMMIT_ID Result"
+
+        - name: Push changes # push the output file to your repo
+          uses: ad-m/github-push-action@master
+          with:
+            github_token: ${{ secrets.GITHUB_TOKEN }}
+            force: true

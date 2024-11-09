@@ -1,0 +1,21 @@
+{
+  "name": "effective-winner",
+  "version": "1.0.0",
+  "description": "Lol",
+  "main": "index.js",
+  "scripts": {
+    "validate": "resumed validate ./Resume/resume.json",
+    "render": "resumed render ./Resume/resume.json --theme=@cakeinpanic/jsonresume-theme-one-page --output=Your_name_resume.html",
+    "convert": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+	"dependencies": {
+    "@jsonresume/schema": "^1.0.0",
+    "sade": "^1.7.0",
+    "yoctocolors": "^2.0.0",
+    "resumed": "4.0.0",
+    "@cakeinpanic/jsonresume-theme-one-page":"^0.0.2", 
+    "puppeteer": "^23.6.1"
+	}
+}
