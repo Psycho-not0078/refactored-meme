@@ -4,7 +4,7 @@ const fs = require('fs');
 (async () => {
 
   // Get type of source from process.argv, default to url
-    var htmlFilePath = "Sathya_Bhat_Resume_Latest.html"
+    var htmlFilePath = "Resume-Latest.html"
 
   // Create a browser instance
     const browser = await puppeteer.launch();
@@ -20,7 +20,7 @@ const fs = require('fs');
 
   // Downlaod the PDF
     const pdf = await page.pdf({
-        path: `Your_Name_Resume_Latest.pdf`,
+        path: `Resume-Latest.pdf`,
         printBackground: true,
         format: 'A4',
     });

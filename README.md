@@ -4,7 +4,7 @@ A Repository for maintaining resume in json format, with github action for autom
 
 ## Steps for custom themes
 - Open package.json and replace the requirement with the substring "jsonresume-theme", the list of themes can be found in https://www.npmjs.com/search?q=jsonresume-theme
-- Change the same in line 8
+- Change the value of FINAL_THEME with the proper name of the node package of the theme
 - Save the file, commit the changes and finally push the changes into repo.
 - The end, enjoy.
 

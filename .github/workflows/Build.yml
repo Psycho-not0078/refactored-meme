@@ -4,10 +4,11 @@ on:
     push:
         branches:
           - 'main'
+env:
+  FINAL_THEME: jsonresume-theme-straightforward
 jobs:
     build:
         name: Code standards & build
-        if: "! contains(toJSON(github.event.commits.*.message), '[skip ci]')"
         runs-on: ubuntu-latest
         timeout-minutes: 3
         permissions:
@@ -25,29 +26,36 @@ jobs:
           with:
             node-version: ${{ matrix.node-version }}
             cache: "npm"
+            cache-dependency-path: ./package.json
+        
 
         - name: "📦 Install dependencies"
           run: npm install && npm ci
-        
+
+        - name: "Set Theme for resume"
+          run: THEME=$FINAL_THEME npm run set_theme
+
         - name: "Run resumed validate"
           run: npm run validate
 
         - name: "Run resumed Render"
-          run: npm run render
+          run: THEME=$FINAL_THEME npm run render
 
         - name: "Convert html to pdf"
           run: npm run convert
-
-        - name: "Add file to staging"
-          run: |
-            COMMIT_ID="${{ github.sha }}"
-            git config --local user.name "Sathya Narayana Bhat"
-            git config --local user.email "snbhat0708@gmail.com"
-            git add Sathya_Bhat_Resume_Latest.pdf
-            git commit -m "$COMMIT_ID Result"
-
-        - name: Push changes # push the output file to your repo
-          uses: ad-m/github-push-action@master
+          
+        - name: generate FOO unique variable based on timestamp
+          run: echo FOO=$(date +%s) >> $GITHUB_ENV
+        
+        - name: Create Release
+          id: create_release
+          uses: svenstaro/upload-release-action@v2
+          env:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           with:
-            github_token: ${{ secrets.GITHUB_TOKEN }}
-            force: true
+            repo_token: ${{ secrets.GITHUB_TOKEN }}
+            file: Sathya_Bhat_Resume_Latest.pdf
+            asset_name: ${{ env.FOO }}_Sathya_Bhat_Resume_Latest.pdf
+            tag: ${{ env.FOO }}
+            overwrite: true
+            body: ${{ github.event.head_commit.message }}
