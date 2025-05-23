@@ -1,110 +1,225 @@
-{
-  "basics": {
-    "name": "John Doe",
-    "label": "Programmer",
-    "image": "",
-    "email": "john@gmail.com",
-    "phone": "(912) 555-4321",
-    "url": "https://johndoe.com",
-    "summary": "A summary of John Doe…",
-    "location": {
-      "address": "2712 Broadway St",
-      "postalCode": "CA 94115",
-      "city": "San Francisco",
-      "countryCode": "US",
-      "region": "California"
-    },
-    "profiles": [{
-      "network": "Twitter",
-      "username": "john",
-      "url": "https://twitter.com/john"
-    }]
-  },
-  "work": [{
-    "name": "Company",
-    "position": "President",
-    "url": "https://company.com",
-    "startDate": "2013-01-01",
-    "endDate": "2014-01-01",
-    "summary": "Description…",
-    "highlights": [
-      "Started the company"
-    ]
-  }],
-  "volunteer": [{
-    "organization": "Organization",
-    "position": "Volunteer",
-    "url": "https://organization.com/",
-    "startDate": "2012-01-01",
-    "endDate": "2013-01-01",
-    "summary": "Description…",
-    "highlights": [
-      "Awarded 'Volunteer of the Month'"
-    ]
-  }],
-  "education": [{
-    "institution": "University",
-    "url": "https://institution.com/",
-    "area": "Software Development",
-    "studyType": "Bachelor",
-    "startDate": "2011-01-01",
-    "endDate": "2013-01-01",
-    "score": "4.0",
-    "courses": [
-      "DB1101 - Basic SQL"
-    ]
-  }],
-  "awards": [{
-    "title": "Award",
-    "date": "2014-11-01",
-    "awarder": "Company",
-    "summary": "There is no spoon."
-  }],
-  "certificates": [{
-    "name": "Certificate",
-    "date": "2021-11-07",
-    "issuer": "Company",
-    "url": "https://certificate.com"
-  }],
-  "publications": [{
-    "name": "Publication",
-    "publisher": "Company",
-    "releaseDate": "2014-10-01",
-    "url": "https://publication.com",
-    "summary": "Description…"
-  }],
-  "skills": [{
-    "name": "Web Development",
-    "level": "Master",
-    "keywords": [
-      "HTML",
-      "CSS",
-      "JavaScript"
-    ]
-  }],
-  "languages": [{
-    "language": "English",
-    "fluency": "Native speaker"
-  }],
-  "interests": [{
-    "name": "Wildlife",
-    "keywords": [
-      "Ferrets",
-      "Unicorns"
-    ]
-  }],
-  "references": [{
-    "name": "Jane Doe",
-    "reference": "Reference…"
-  }],
-  "projects": [{
-    "name": "Project",
-    "startDate": "2019-01-01",
-    "endDate": "2021-01-01",
-    "description": "Description...",
-    "highlights": [
-      "Won award at AIHacks 2016"
-    ],
-    "url": "https://project.com/"
-  }]
-}
+	
+basics	
+name	"Lavlesh Mishra"
+label	"Cybersecurity Engineer"
+email	"mishralavlesh786@gmail.com"
+url	"https://blog.homeserverfail.in"
+phone	"+91 9769973164"
+summary	"Cybersecurity Engineer with 3+ years of experience in incident response, cloud security (AWS/GCP), and SIEM engineering. Proven track record in proactively mitigating threats, automating security workflows, and leading employee awareness initiatives. Passionate about building secure systems through innovative solutions."
+location	
+address	"48, Lakshmi Nivas, Siva Nagar, Kavundampalayam"
+postalCode	"641030"
+city	"Coimbatore"
+countryCode	"IN"
+region	"Tamil Nadu"
+profiles	
+0	
+network	"LinkedIn"
+username	"sathya-narayana-bhat"
+url	"https://www.linkedin.com/in/sathya-narayana-bhat/"
+1	
+network	"Github"
+username	"Psycho-not0078"
+url	"https://github.com/Psycho-not0078"
+work	
+0	
+company	"IDfy"
+position	"Information Security Engineer"
+website	"https://idfy.com"
+startDate	"2022-07-01"
+summary	"As a Cybersecurity Engineer at IDfy, I played a pivotal role in safeguarding our organization's critical infrastructure."
+highlights	
+0	"Established a unified security posture through a centralized multi-cloud SIEM [Wazuh] platform, reducing misconfigurations and increasing detection capablities"
+1	"Experimented with SOAR Deployment [Shuffle, Windmill.dev] for incident response automation"
+2	"Implemented Incident Response Playbook with focus on Web Application Firewall [WAF] and SIEM events"
+3	"Performed Multiple Vulnerablity assessmets for company assets, reducing the occurance of high/critical severity by 75-80%"
+4	"Developed and maintained custom security scripts and tools to automate routine tasks and improve efficiency."
+5	"Collaborated with development teams to ensure secure coding practices and adherence to security standards."
+6	"Responded to security incidents, conducted root cause analysis, and implemented corrective measures to prevent future occurrences."
+7	"Contributed to a secure and resilient organization by proactively identifying and addressing potential security risks."
+8	"Conducted Regular Information Security training sessions for company employees"
+9	"Trained and empowered L1 SOC analysts to confidently handle critical cybersecurity incidents with speed and precision."
+name	"IDfy"
+url	"https://idfy.com"
+1	
+company	"IDfy"
+position	"Information Security Engineer [Internship]"
+website	"https://idfy.com"
+startDate	"2022-01-01"
+endDate	"2022-06-30"
+summary	"Gain practical cybersecurity experience as an intern at IDfy, where I contributed to enhancing application security. I performed comprehensive vulnerability assessments (VAPT) on critical applications, identifying and mitigating potential risks."
+highlights	
+0	"Collaborated with development teams to address identified vulnerabilities."
+1	"Provided detailed vulnerability reports with remediation recommendations."
+2	"Enhanced communication and collaboration between security and development teams."
+name	"IDfy"
+url	"https://idfy.com"
+2	
+company	"NIIT University"
+position	"PHP Developer [Internhip]"
+website	"https://niituniversity.in/"
+startDate	"2021-06-01"
+endDate	"2021-08-01"
+summary	"Successfully created a Moodle Plugin that extracts various exam analytics."
+highlights	
+0	"Demonstrated expertise in creating a tailored Moodle [exam portal] plugin to address specific analytics requirements."
+1	"Successfully extracted relevant data from Moodle's database and performed in-depth analysis to derive meaningful insights."
+2	"Identified trends and patterns in student behavior and performance to support targeted interventions and improve overall learning outcomes."
+url	"https://niituniversity.in/"
+name	"NIIT University"
+education	
+0	
+institution	"NIIT University"
+area	"B.Tech Computer Science and Engineering"
+studyType	"Graduated"
+startDate	"2018-08"
+endDate	"2022-06"
+gpa	"7.8"
+1	
+institution	"Kikani Vidhya Mandir [Coimbatore]"
+studyType	"12th (CBSE)"
+startDate	"2017-04"
+endDate	"2018-04"
+2	
+institution	"Kikani Vidhya Mandir [Coimbatore]"
+studyType	"10th (CBSE)"
+startDate	"2015-04"
+endDate	"2016-04"
+3	
+institution	"Abu Dhabi Indian School [Abu Dhabi]"
+studyType	"Primary and Middle School Education CBSE"
+startDate	"2006-08"
+endDate	"2014-06"
+certificates	
+0	
+name	"Security+"
+date	"2021-08"
+issuer	"Comptia"
+url	"https://www.credly.com/badges/cd2ec8a8-639e-40d6-a99b-37c142f46263/public_url"
+1	
+name	"Google Cloud Cybersecurity Certificate"
+date	"2024-06"
+issuer	"Google Cloud Platform"
+url	"https://www.credly.com/badges/4a2c6c05-b6f5-4690-9462-02f1523c6932/public_url"
+2	
+name	"Practical Cloud Security"
+date	"2025-04-09"
+issuer	"O'Reilly Media"
+url	"https://www.credly.com/badges/6ea7ef53-2f7c-42cc-8eaa-e390ec30bb25/public_url"
+skills	
+0	
+name	"Cloud Computing"
+level	"Advanced"
+keywords	
+0	"AWS"
+1	"GCP"
+2	"Cloud SQL"
+3	"GKE"
+4	"IaaC"
+1	
+name	"DevOps and DevSecOps"
+level	"Advanced"
+keywords	
+0	"Docker"
+1	"Kubernates"
+2	"CI/CD Pipelines"
+3	"Packer"
+4	"Terraform"
+5	"Kustomize"
+6	"Helm"
+2	
+name	"VAPT"
+level	"Advanced"
+keywords	
+0	"Pentesting"
+1	"Code Analysis"
+2	"Automation"
+3	"Network VAPT"
+3	
+name	"Cybersecurity Concepts"
+level	"Advanced"
+keywords	
+0	"SAST"
+1	"Alert Automation"
+2	"Threat Analysis"
+3	"Active Directory"
+4	"Threat Detection"
+5	"Threat Modeling"
+6	"Threat Intelligence "
+4	
+name	"Software Development"
+level	"Advanced"
+keywords	
+0	"Python"
+1	"Java"
+2	"C++"
+3	"MySQL"
+4	"PHP"
+5	"CLI Tooling"
+5	
+name	"Operating Systems"
+level	"Advanced"
+keywords	
+0	"Windows"
+1	"Linux (Debian, Fedora, Arch etc.)"
+2	"MacOS"
+6	
+name	"Incident Response"
+level	"Advanced"
+keywords	
+0	"SIEM"
+1	"WAF"
+2	"Playbooks"
+3	"Wazuh"
+4	"Shuffle"
+languages	
+0	
+language	"English"
+fluency	"Fluent"
+1	
+language	"Tamil"
+fluency	"Fluent"
+2	
+language	"Hindi"
+fluency	"Fluent"
+3	
+language	"Japanese"
+fluency	"Beginner"
+projects	
+0	
+name	"Vaultify"
+startDate	"2023-01"
+endDate	"2023-01"
+description	"A Vault for PII data, to ensure secure and auditable access to them"
+highlights	
+0	"Participated in IDfy Hackaton"
+1	"Led backend security implementation using AES encryption to safeguard PII access."
+url	"https://github.com/gyaneshpande/vaultify/"
+1	
+name	"Swift Vote"
+startDate	"2021"
+endDate	"2022"
+description	"Blockchain-based voting system specifically designed to address the legal requirements of a democratic process."
+url	"https://github.com/Psycho-not0078/Swift-Vote/"
+interests	
+0	
+name	"Research and Development"
+keywords	
+0	"Experimentation"
+1	"Self Hosting Tools"
+1	
+name	"Gaming"
+keywords	
+0	"PC games"
+2	
+name	"Art"
+keywords	
+0	"Drawing"
+1	"Graphic Designing"
+2	"3d Modeling"
+3	
+name	"Martial Arts"
+keywords	
+0	"Karate"
+1	"Kobudo"
+2	"Kalaripayattu"
