@@ -4,12 +4,13 @@
   "description": "Lol",
   "main": "index.js",
   "scripts": {
-    "set_theme": "npm install -i $THEME",
+    "view_theme": "export $(cat .env | egrep -v '#|^$' | xargs); echo $THEME",
+    "set_theme": "export $(cat .env | egrep -v '#|^$' | xargs) ; npm install -i $THEME --legacy-peer-deps",
     "validate": "resumed validate ./Resume/resume.json",
-    "render": "resumed render ./Resume/resume.json --theme=$THEME --output=Resume-Latest.html",
+    "render": "export $(cat .env | egrep -v '#|^$' | xargs) ; resumed render ./Resume/resume.json --theme=$THEME --output=Sathya_Bhat_Resume_Latest.html",
     "convert": "node index.js"
   },
-  "author": "",
+  "author": "nomansland",
   "license": "ISC",
   "dependencies": {
     "@jsonresume/schema": "^1.0.0",

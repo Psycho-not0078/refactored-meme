@@ -2,10 +2,10 @@ name: Build
 run-name: 🚀 Render resumed
 on: 
     push:
-        branches:
-          - 'main'
+        branches: ['main']
+        paths: ['Resume/','index.js','package.json']
 env:
-  FINAL_THEME: jsonresume-theme-straightforward
+  THEME: "jsonresume-theme-dev-ats"
 jobs:
     build:
         name: Code standards & build
@@ -32,14 +32,17 @@ jobs:
         - name: "📦 Install dependencies"
           run: npm install && npm ci
 
+        - name: "set theme in env"
+          run: echo "THEME=$THEME" > .env
+
         - name: "Set Theme for resume"
-          run: THEME=$FINAL_THEME npm run set_theme
+          run: npm run set_theme
 
         - name: "Run resumed validate"
           run: npm run validate
 
         - name: "Run resumed Render"
-          run: THEME=$FINAL_THEME npm run render
+          run: npm run render
 
         - name: "Convert html to pdf"
           run: npm run convert
@@ -56,6 +59,6 @@ jobs:
             repo_token: ${{ secrets.GITHUB_TOKEN }}
             file: Sathya_Bhat_Resume_Latest.pdf
             asset_name: ${{ env.FOO }}_Sathya_Bhat_Resume_Latest.pdf
-            tag: ${{ env.FOO }}
+            tag: ${{env.THEME}}
             overwrite: true
-            body: ${{ github.event.head_commit.message }}
+            body: ${{ github.event.head_commit.message }}, Theme of resume = ${{env.THEME}}
