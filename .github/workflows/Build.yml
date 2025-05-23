@@ -2,7 +2,7 @@ name: Build
 run-name: 🚀 Render resumed
 on: 
     push:
-        branches: ['main']
+        branches: ['master']
         paths: ['Resume/','index.js','package.json']
 env:
   THEME: "jsonresume-theme-dev-ats"
